@@ -8,7 +8,7 @@ env_vars = {
   # Logs Channel ID
   "CACHE_CHANNEL": "",
   # Force Subs Channel username without @
-  "CHANNEL": "",
+  "CHANNEL": "Manga_Campus",
 }
 
 DB_URL = "mongodb+srv://justatestsubject01:HzP5SK8ZiiLHcF3o@cluster0.wizfkbo.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
