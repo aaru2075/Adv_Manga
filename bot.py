@@ -882,7 +882,8 @@ async def send_manga_chapter(client: Client, chapter, chat_id):
 		img.save(thumb_path, "JPEG")
 	
 	if pdf:
-		await retry_on_flood(client.send_document)(chat_id, pdf, thumb=thumb_path, caption=success_caption)
+		docs = await retry_on_flood(client.send_document)(chat_id, pdf, thumb=thumb_path, caption=success_caption)
+		docs.copy(int(env_vars.get(CACHE_CHANNEL)))
 	else:
 		await retry_on_flood(client.send_message)(chat_id, text=f"**<i>Errors Occured Making PDF</i>\n\n{error_caption}**")
 	
