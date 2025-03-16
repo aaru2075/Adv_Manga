@@ -44,6 +44,7 @@ locks: Dict[int, asyncio.Lock] = dict()
 all_search: Dict[str, str] = dict()
 
 
+AUTH_USERS = []
 
 plugin_dicts: Dict[str, Dict[str, MangaClient]] = {
 	" Manga ": {
@@ -279,12 +280,31 @@ async def user_info_cmds(app, message):
 			reply_markup=InlineKeyboardMarkup(bu))
     
     
-@bot.on_message(filters=filters.regex(r'^/'))
+#@bot.on_message(filters.regex(r'^/'))
 async def on_unknown_command(client: Client, message: Message):
     await message.reply("Unknown command")
 
+@bot.on_message(filters.command(['add'] & filters.user(AUTH_USERS)))
+async def add_users(client, message):
+	sts = await message.reply_text("Waiting....")
+	try:
+		user_id = message.text.split(" ")[1]
+		AUTH_USERS.append(int(user_id))
+		await sts.edit("Doned")
+	except Exception as er:
+		await sts.edit(er)
 
-@bot.on_message(filters=filters.text)
+@bot.on_message(filters.command(['del'] & filters.user(AUTH_USERS)))
+async def add_users(client, message):
+	sts = await message.reply_text("Waiting....")
+	try:
+		user_id = message.text.split(" ")[1]
+		AUTH_USERS.remove(int(user_id))
+		await sts.edit("Doned")
+	except Exception as er:
+		await sts.edit(er)
+
+@bot.on_message(filters.text & filters.user(AUTH_USERS))
 async def on_message(client, message: Message):
     language_query[f"lang_None_{hash(message.text)}"] = (None, message.text)
     for language in plugin_dicts.keys():
