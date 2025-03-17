@@ -284,7 +284,7 @@ async def user_info_cmds(app, message):
 async def on_unknown_command(client: Client, message: Message):
     await message.reply("Unknown command")
 
-@bot.on_message(filters.command(('add') & filters.user(AUTH_USERS)))
+@bot.on_message(filters.command(['add'] & filters.user[AUTH_USERS]))
 async def add_users(client, message):
 	sts = await message.reply_text("Waiting....")
 	try:
