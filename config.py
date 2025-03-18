@@ -1,8 +1,8 @@
 env_vars = {
   # Get From my.telegram.org
-  "API_HASH": "6df11147cbec7d62a323f0f498c8c03a",
+  "API_HASH": "057fd0be9d7c38526b143c582bceb24b",
   # Get From my.telegram.org
-  "API_ID": "23933044",
+  "API_ID": "20445873",
   #Get For @BotFather
   "BOT_TOKEN": "7873752441:AAEUoPy_mYrjFU6oy5x9mzq8l_NFIHj-hwg",
   # Logs Channel ID
