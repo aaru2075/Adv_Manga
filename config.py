@@ -6,11 +6,11 @@ env_vars = {
   #Get For @BotFather
   "BOT_TOKEN": "7873752441:AAEUoPy_mYrjFU6oy5x9mzq8l_NFIHj-hwg",
   # Logs Channel ID
-  "CACHE_CHANNEL": "",
+  "CACHE_CHANNEL": "-1002432294589",
   # Force Subs Channel username without @
   "CHANNEL": "Manga_Campus",
 }
 
-DB_URL = "mongodb+srv://justatestsubject01:HzP5SK8ZiiLHcF3o@cluster0.wizfkbo.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
-DB_NAME = "mdb"
+DB_URL = "mongodb+srv://renamebot:amrenamebot@cluster0.5ornz.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+DB_NAME = "Cluster0"
     
