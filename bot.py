@@ -275,7 +275,7 @@ async def user_info_cmds(app, message):
 			reply_markup=InlineKeyboardMarkup(bu))
 	except:
 		await message.reply_photo(
-			"Intro.jpg",
+			"IMG_20250310_200148_841.jpg",
 			caption=User_TXT.format(user_id, banner, "None", caption, thumbnali, file_name),
 			reply_markup=InlineKeyboardMarkup(bu))
     
