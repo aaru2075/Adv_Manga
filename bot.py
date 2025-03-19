@@ -44,7 +44,7 @@ locks: Dict[int, asyncio.Lock] = dict()
 all_search: Dict[str, str] = dict()
 
 
-AUTH_USERS = []
+AUTH_USERS = [5543390445]
 
 plugin_dicts: Dict[str, Dict[str, MangaClient]] = {
 	" Manga ": {
